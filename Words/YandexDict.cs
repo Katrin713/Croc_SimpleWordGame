@@ -13,8 +13,8 @@ namespace Words
 {
     public class YandexDict
     {
-        private string path = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?";
-        private string key = "key=dict.1.1.20180422T095855Z.ca85a4432a8a4b68.01df85ec78e2eba45ea8213fa997e6c3fd5fa230";
+        private const string path = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?";
+        private const string key = "key=dict.1.1.20180422T095855Z.ca85a4432a8a4b68.01df85ec78e2eba45ea8213fa997e6c3fd5fa230";
 
         public string Translate(string s, string lang = "ru-ru")
         {
@@ -39,7 +39,7 @@ namespace Words
                             throw new Exception("Слова не существует в словаре!");
 
                         s = translation.def[0].text;
-                    }
+                    } 
                 }
                 return s;
             }
